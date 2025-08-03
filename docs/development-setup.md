@@ -2,16 +2,28 @@
 
 ## 🚀 クイックスタート
 
-### 1. セットアップ
+### 1. リポジトリクローン
+```bash
+git clone https://github.com/osawata36/kids-summer-homework.git
+cd kids-summer-homework
+```
+
+### 2. セットアップ
 ```bash
 npm run setup
 ```
 
-### 2. 開発サーバー起動
+### 3. 開発サーバー起動
 ```bash
 npm run dev
 ```
 ブラウザで http://localhost:3000 が自動で開きます
+
+## 🌐 本番環境
+
+**GitHub Pages**: https://osawata36.github.io/kids-summer-homework/
+
+> 現在はモックアップが表示されます。実装完了後に実際のアプリが利用可能になります。
 
 ## 📋 利用可能なコマンド
 
