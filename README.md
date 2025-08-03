@@ -4,7 +4,7 @@
 
 ## 🌐 ライブデモ
 
-**GitHub Pages**: https://osamu.github.io/kids-summer-homework/
+**GitHub Pages**: https://osawata36.github.io/kids-summer-homework/
 
 > iPadやiPhoneのSafariでアクセスしてください
 
@@ -33,7 +33,7 @@
 
 ### セットアップ
 ```bash
-git clone https://github.com/osamu/kids-summer-homework.git
+git clone https://github.com/osawata36/kids-summer-homework.git
 cd kids-summer-homework
 npm run setup
 ```
