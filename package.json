@@ -1,0 +1,35 @@
+{
+  "name": "kids-homework-manager",
+  "version": "1.0.0",
+  "description": "10歳の子供向け宿題管理アプリ",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --host=0.0.0.0 --open=/",
+    "start": "npm run dev",
+    "serve": "live-server --port=8080 --host=0.0.0.0 --open=/",
+    "debug": "live-server --port=3000 --host=0.0.0.0 --open=/ --verbose",
+    "build": "node scripts/build.js",
+    "clean": "rm -rf dist",
+    "setup": "npm install && echo 'セットアップ完了！npm run dev で開発開始'"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "keywords": [
+    "homework",
+    "kids",
+    "education",
+    "task-management",
+    "vanilla-js"
+  ],
+  "author": "osamu",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}
