@@ -30,6 +30,8 @@ htmlFiles.forEach(file => {
     // 本番環境用の最適化
     content = content.replace(/console\.(log|debug|info)\([^)]*\);?/g, '');
     content = content.replace(/\/\*[\s\S]*?\*\//g, ''); // コメント削除
+    // デバッグ設定の無効化
+    content = content.replace(/<script[^>]*debug-config\.js[^>]*><\/script>/g, '');
   }
   
   fs.writeFileSync(path.join(config.distDir, file), content);
@@ -40,6 +42,19 @@ if (fs.existsSync(config.srcDir)) {
   // CSS, JSファイルのコピー
   copyDirectory(config.srcDir, config.distDir);
 }
+
+// 追加ファイルのコピー
+const additionalFiles = ['debug-config.js'];
+additionalFiles.forEach(file => {
+  if (fs.existsSync(file)) {
+    let content = fs.readFileSync(file, 'utf8');
+    if (isProduction) {
+      // 本番環境では空のファイルとして扱う
+      content = '// Debug configuration disabled in production';
+    }
+    fs.writeFileSync(path.join(config.distDir, file), content);
+  }
+});
 
 console.log('✅ ビルド完了！');
 
